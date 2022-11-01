@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Pacifico" 
+        rel="stylesheet" 
+        type="text/css"
+    />
+</head>
+<body>
+    <h1>Iris Flower Species Prediction</h1>
+
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="Sepal_Length" placeholder="Sepal Length (cm)" required="required">
+        <input type="text" name="Sepal_Width" placeholder="Sepal Width (cm)" required="required">
+        <input type="text" name="Petal_Length" placeholder="Petal Length (cm)" required="required">
+        <input type="text" name="Petal_Width" placeholder="Petal Width (cm)" required="required">
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+            Predict
+        </button>
+
+        <br/>
+        <br/>
+
+        <h3>{{prediction}}</h3>
+    </form>
+</body>
+</html>
